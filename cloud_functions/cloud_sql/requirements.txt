@@ -1,0 +1,7 @@
+# Function dependencies, for example:
+# package>=version
+PyMySQL
+Flask
+flask-cors
+redis
+google-api-python-client

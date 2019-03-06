@@ -1,0 +1,73 @@
+<?php
+
+// Updated by yas 2018/11/06.
+// Updated by yas 2018/10/30.
+// Updated by yas 2018/10/28.
+// Updated by yas 2018/10/21.
+// Updated by yas 2018/10/20.
+
+/**
+ * @file
+ * Contains autocomplete.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormInterface;
+
+/**
+ * Implements hook_help().
+ */
+function autocomplete_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the autocomplete module.
+    case 'help.page.autocomplete':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Autocomplete Demo') . '</p>';
+      return $output;
+
+    default:
+  }
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function autocomplete_theme() {
+  return [
+    'autocomplete' => [
+      'render element' => 'children',
+    ],
+  ];
+
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function autocomplete_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  $formObject = $form_state->getFormObject();
+
+  if ($formObject instanceof \Drupal\autocomplete\Form\ProductEntityAutocompleteForm
+  ||  $formObject instanceof \Drupal\autocomplete\Form\ProductEntityCloudFunctionsForm) {
+
+    $form['#attached']['library'][] = 'autocomplete/autocomplete';
+    $form['#attached']['drupalSettings']['autocomplete']['autocomplete']['cloud_functions']['cloud_sql']
+      = \Drupal::config('autocomplete.admin_settings')
+      ->get('GCP_CLOUD_FUNCTIONS_CLOUD_SQL_URL');
+    $form['#attached']['drupalSettings']['autocomplete']['autocomplete']['cloud_functions']['cloud_datastore']
+      = \Drupal::config('autocomplete.admin_settings')
+      ->get('GCP_CLOUD_FUNCTIONS_CLOUD_DATASTORE_URL');
+    $form['#attached']['drupalSettings']['autocomplete']['autocomplete']['cloud_functions']['bigquery']
+      = \Drupal::config('autocomplete.admin_settings')
+      ->get('GCP_CLOUD_FUNCTIONS_BIGQUERY_URL');
+
+    if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== 'seven') {
+      $form['#attached']['library'][] = 'bootstrap/drupal.autocomplete';
+    }
+  }
+
+}
+

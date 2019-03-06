@@ -1,0 +1,119 @@
+autocomplete.admin_settings:
+  title: 'Autocomplete Settings'
+  route_name: 'autocomplete.admin_settings'
+  base_route: 'system.admin_config'
+  description: 'Autocomplete Admin Settings.'
+
+# Product entity routing definition
+product_entity.settings_tab:
+  route_name: product_entity.settings
+  title: 'Settings'
+  base_route: product_entity.settings
+
+entity.product_entity.canonical:
+  route_name: entity.product_entity.canonical
+  base_route: entity.product_entity.canonical
+  title: 'View'
+
+entity.product_entity.edit_form:
+  route_name: entity.product_entity.edit_form
+  base_route: entity.product_entity.canonical
+  title: 'Edit'
+
+entity.product_entity.delete_form:
+  route_name: entity.product_entity.delete_form
+  base_route: entity.product_entity.canonical
+  title: Delete
+  weight: 10
+
+entity.product_entity.collection:
+  route_name: entity.product_entity.collection
+  base_route: system.admin_content
+  title: 'Products'
+
+entity.product_entity.generate_form:
+  route_name: entity.product_entity.generate_form
+  title: Product Entity Generator
+  base_route: entity.product_entity.canonical
+  weight: 11
+
+# Autocomplete entity routing definition
+autocomplete_entity.settings_tab:
+  route_name: autocomplete_entity.settings
+  title: 'Settings'
+  base_route: autocomplete_entity.settings
+
+entity.autocomplete_entity.canonical:
+  route_name: entity.autocomplete_entity.canonical
+  base_route: entity.autocomplete_entity.canonical
+  title: 'View'
+
+entity.autocomplete_entity.edit_form:
+  route_name: entity.autocomplete_entity.edit_form
+  base_route: entity.autocomplete_entity.canonical
+  title: 'Edit'
+
+entity.autocomplete_entity.delete_form:
+  route_name:  entity.autocomplete_entity.delete_form
+  base_route:  entity.autocomplete_entity.canonical
+  title: Delete
+  weight: 10
+
+  entity.autocomplete_entity.collection:
+  route_name:  entity.autocomplete_entity.collection
+  base_route:  system.admin_content
+  title: 'Autocompletes'
+
+# Category entity routing definition
+category_entity.settings_tab:
+  route_name: category_entity.settings
+  title: 'Settings'
+  base_route: category_entity.settings
+
+entity.category_entity.canonical:
+  route_name: entity.category_entity.canonical
+  base_route: entity.category_entity.canonical
+  title: 'View'
+
+entity.category_entity.edit_form:
+  route_name: entity.category_entity.edit_form
+  base_route: entity.category_entity.canonical
+  title: 'Edit'
+
+entity.category_entity.delete_form:
+  route_name: entity.category_entity.delete_form
+  base_route: entity.category_entity.canonical
+  title: Delete
+  weight: 10
+
+entity.category_entity.collection:
+  route_name: entity.category_entity.collection
+  base_route: system.admin_content
+  title: 'Categores'
+
+# Store entity routing definition
+store_entity.settings_tab:
+  route_name: store_entity.settings
+  title: 'Settings'
+  base_route: store_entity.settings
+
+entity.store_entity.collection:
+  route_name: entity.store_entity.collection
+  base_route: system.admin_content
+  title: 'Stores'
+
+entity.store_entity.canonical:
+  route_name: entity.store_entity.canonical
+  base_route: entity.store_entity.canonical
+  title: 'View'
+
+entity.store_entity.edit_form:
+  route_name: entity.store_entity.edit_form
+  base_route: entity.store_entity.canonical
+  title: 'Edit'
+
+entity.store_entity.delete_form:
+  route_name: entity.store_entity.delete_form
+  base_route: entity.store_entity.canonical
+  title: Delete
+  weight: 10

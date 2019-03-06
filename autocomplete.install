@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Update functions for autocomplete.
+ */
+
+// Created by yas 2018/11/06.
+// Created by yas 2018/10/30.
+// Created by yas 2018/10/14.
+// Created by yas 2018/10/10.
+/**
+ * Implements hook_uninstall().
+ */
+function autocomplete_uninstall() {
+
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_KEY_FILE_PATH')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_PROJECDT_ID')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_CLOUD_DATASTORE_KIND')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_BIGQUERY_DATASET')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_BIGQUERY_TABLE')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_CLOUD_FUNCTIONS_CLOUD_SQL_URL')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_CLOUD_FUNCTIONS_CLOUD_DATASTORE_URL')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('GCP_CLOUD_FUNCTIONS_BIGQUERY_URL')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('PRODUCTS_JSON_URL')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('PRODUCTS_COUNT_LIMIT')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('AUTOCOMPLETE_RESULT_MAX_COUNT')->save();
+  Drupal::configFactory()->getEditable('autocomplete.admin_settings')->clear('PRODUCTS_RECORD_CREATE_TOTAL')->save();
+
+}

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/autocomplete",
+  "type": "drupal-module",
+  "description": "Autocomplete Demo",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/autocomplete",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/autocomplete",
+    "source": "http://cgit.drupalcode.org/autocomplete"
+  },
+  "require": { }
+}

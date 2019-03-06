@@ -1,0 +1,88 @@
+# Updated by yas 2018/11/07.
+# Updated by yas 2018/10/17.
+# Updated by yas 2018/10/08.
+# Updated by yas 2018/10/05.
+# Updated by yas 2018/10/04.
+# Created by yas 2018/10/03.
+
+entity.products.import.json:
+  path: '/import/json'
+  defaults:
+    _controller: '\Drupal\autocomplete\Controller\ProductEntityController::importJson'
+    _format: json
+  methods:  [GET]
+  requirements:
+   _permission: 'view published product entities'
+
+entity.product_entity.autocomplete:
+  path: '/admin/content/product_entity/autocomplete/{storage_type}/{count}'
+  defaults:
+    _controller: '\Drupal\autocomplete\Controller\ProductEntityController::handleAutocomplete'
+    _format: json
+  methods:  [GET]
+  requirements:
+    _permission: 'view published product entities'
+
+entity.product_entity.search_form.autocomplete:
+  path: '/admin/content/product_entity/search/autocomplete'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\ProductEntityAutocompleteForm'
+    _title: 'Search product'
+  requirements:
+    _permission: 'view published product entities'
+
+entity.product_entity.search_form.cloud_datastore:
+  path: '/admin/content/product_entity/search/cloud_datastore'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\ProductEntityCloudDatastoreForm'
+    _title: 'Search product (Cloud Datastore)'
+  requirements:
+    _permission: 'view published product entities'
+
+entity.product_entity.search_form.entity_autocomplete:
+  path: '/admin/content/product_entity/search/entity_autocomplete'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\ProductEntityDrupalForm'
+    _title: 'Search product (Cloud SQL | Drupal)'
+  requirements:
+    _permission: 'view published product entities'
+
+entity.product_entity.search_form.cloud_sql:
+  path: '/admin/content/product_entity/search/cloud_sql'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\ProductEntityCloudSqlForm'
+    _title: 'Search product (Cloud SQL | SQL)'
+  requirements:
+    _permission: 'view published product entities'
+
+entity.product_entity.search_form.bigquery:
+  path: '/admin/content/product_entity/search/bigquery'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\ProductEntityBigQueryForm'
+    _title: 'Search product (BigQuery)'
+  requirements:
+    _permission: 'view published product entities'
+
+entity.product_entity.search_form.cloud_functions:
+  path: '/admin/content/product_entity/search/cloud_functions'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\ProductEntityCloudFunctionsForm'
+    _title: 'Search product (Cloud Functions | Cloud SQL | BigQuery)'
+  requirements:
+    _permission: 'view published product entities'
+
+entity.product_entity.generate_form:
+  path: '/admin/content/product_entity/generator'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\ProductEntityGenerateForm'
+    _title: 'Product Entity Generator'
+  requirements:
+    _permission: 'administer product entities'
+
+autocomplete.admin_settings:
+  path: '/admin/config/services/autocomplete'
+  defaults:
+    _form: '\Drupal\autocomplete\Form\AutocompleteAdminSettingsForm'
+    _title: 'Autocomplete Settings'
+  requirements:
+    _permission: 'administer site configuration'

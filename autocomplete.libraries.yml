@@ -1,0 +1,11 @@
+autocomplete:
+  version: 1.x
+  js:
+    js/autocomplete-cloud_functions.js: {}
+  dependencies: 
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.ui
+    - core/jquery.ui.widget
+    - core/jquery.ui.menu
+    - core/jquery.ui.autocomplete

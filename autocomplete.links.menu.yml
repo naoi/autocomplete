@@ -1,0 +1,61 @@
+# Autocomplete entity menu items definition
+entity.autocomplete_entity.collection:
+  title: 'Autocomplete entity list'
+  route_name: entity.autocomplete_entity.collection
+  description: 'List Autocomplete entities'
+  parent: system.admin_content
+  weight: 100
+
+autocomplete_entity.admin.structure.settings:
+  title: 'Autocomplete entity settings'
+  description: 'Configure Autocomplete entities'
+  route_name: autocomplete_entity.settings
+  parent: system.admin_structure
+
+# Category entity menu items definition
+entity.category_entity.collection:
+  title: 'Category list'
+  route_name: entity.category_entity.collection
+  description: 'List Category entities'
+  parent: system.admin_content
+  weight: 100
+
+category_entity.admin.structure.settings:
+  title: 'Category settings'
+  description: 'Configure Category entities'
+  route_name: category_entity.settings
+  parent: system.admin_structure
+
+# Product entity menu items definition
+entity.product_entity.collection:
+  title: 'Product list'
+  route_name: entity.product_entity.collection
+  description: 'List Product entities'
+  parent: system.admin_content
+  weight: 100
+
+product_entity.admin.structure.settings:
+  title: 'Product settings'
+  description: 'Configure Product entities'
+  route_name: product_entity.settings
+  parent: system.admin_structure
+
+# Store entity menu items definition
+entity.store_entity.collection:
+  title: 'Store list'
+  route_name: entity.store_entity.collection
+  description: 'List Store entities'
+  parent: system.admin_content
+  weight: 100
+
+store_entity.admin.structure.settings:
+  title: 'Store settings'
+  description: 'Configure Store entities'
+  route_name: store_entity.settings
+  parent: system.admin_structure
+
+autocomplete.admin_settings:
+  title: 'Autocomplete'
+  description: 'Configure Autocomplete'
+  route_name: autocomplete.admin_settings
+  parent: system.admin_config_services

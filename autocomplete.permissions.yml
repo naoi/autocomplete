@@ -1,0 +1,78 @@
+add autocomplete entities:
+  title: 'Create new Autocomplete entities'
+
+administer autocomplete entities:
+  title: 'Administer Autocomplete entities'
+  description: 'Allow to access the administration form to configure Autocomplete entities.'
+  restrict access: true
+
+delete autocomplete entities:
+  title: 'Delete Autocomplete entities'
+
+edit autocomplete entities:
+  title: 'Edit Autocomplete entities'
+
+view published autocomplete entities:
+  title: 'View published Autocomplete entities'
+
+view unpublished autocomplete entities:
+  title: 'View unpublished Autocomplete entities'
+
+add category entities:
+  title: 'Create new Category entities'
+
+administer category entities:
+  title: 'Administer Category entities'
+  description: 'Allow to access the administration form to configure Category entities.'
+  restrict access: true
+
+delete category entities:
+  title: 'Delete Category entities'
+
+edit category entities:
+  title: 'Edit Category entities'
+
+view published category entities:
+  title: 'View published Category entities'
+
+view unpublished category entities:
+  title: 'View unpublished Category entities'
+add product entities:
+  title: 'Create new Product entities'
+
+administer product entities:
+  title: 'Administer Product entities'
+  description: 'Allow to access the administration form to configure Product entities.'
+  restrict access: true
+
+delete product entities:
+  title: 'Delete Product entities'
+
+edit product entities:
+  title: 'Edit Product entities'
+
+view published product entities:
+  title: 'View published Product entities'
+
+view unpublished product entities:
+  title: 'View unpublished Product entities'
+
+add store entities:
+  title: 'Create new Store entities'
+
+administer store entities:
+  title: 'Administer Store entities'
+  description: 'Allow to access the administration form to configure Store entities.'
+  restrict access: true
+
+delete store entities:
+  title: 'Delete Store entities'
+
+edit store entities:
+  title: 'Edit Store entities'
+
+view published store entities:
+  title: 'View published Store entities'
+
+view unpublished store entities:
+  title: 'View unpublished Store entities'

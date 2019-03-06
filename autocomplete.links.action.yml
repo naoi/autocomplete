@@ -1,0 +1,58 @@
+entity.autocomplete_entity.add_form:
+  route_name: entity.autocomplete_entity.add_form
+  title: 'Add Autocomplete entity'
+  appears_on:
+    - entity.autocomplete_entity.collection
+
+entity.category_entity.add_form:
+  route_name: entity.category_entity.add_form
+  title: 'Add Category'
+  appears_on:
+    - entity.category_entity.collection
+
+entity.product_entity.search_form.autocomplete:
+  route_name: entity.product_entity.search_form.autocomplete
+  title: 'Search Product'
+  appears_on:
+    - entity.product_entity.collection
+
+# entity.product_entity.search_form.cloud_sql:
+#   route_name: entity.product_entity.search_form.cloud_sql
+#   title: 'Cloud SQL'
+#   appears_on:
+#     - entity.product_entity.collection
+# 
+# entity.product_entity.search_form.cloud_datastore:
+#   route_name: entity.product_entity.search_form.cloud_datastore
+#   title: 'Cloud Datastore'
+#   appears_on:
+#     - entity.product_entity.collection
+# 
+# entity.product_entity.search_form.bigquery:
+#   route_name: entity.product_entity.search_form.bigquery
+#   title: 'BigQuery'
+#   appears_on:
+#     - entity.product_entity.collection
+
+entity.product_entity.add_form:
+  route_name: entity.product_entity.add_form
+  title: 'Add Product (Cloud SQL)'
+  appears_on:
+    - entity.product_entity.collection
+
+entity.product_entity.generate_form:
+  route_name: entity.product_entity.generate_form
+  title: 'Generate Product Entites'
+  appears_on:
+    - entity.product_entity.collection
+
+entity.store_entity.add_form:
+  route_name: entity.store_entity.add_form
+  title: 'Add Store'
+  appears_on:
+    - entity.store_entity.collection
+
+autocomplete.admin_settings:
+  route_name: 'autocomplete.admin_settings'
+  title: 'Autocomplete Settings'
+  base_route: autocopmlete.admin_settings

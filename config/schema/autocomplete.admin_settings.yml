@@ -1,0 +1,53 @@
+# Updated by yas 2018/11/06.
+# Updated by yas 2018/10/28.
+# Updated by yas 2018/10/21.
+# Updated by yas 2018/10/14.
+# Created by yas 2018/10/08.
+
+# Schema for the configuration files of the Autocomplete module.
+autocomplete.admin_settings:
+  type: config_object
+  label: 'Autocomplete settings'
+  mapping:
+    GCP_KEY_FILE_PATH:
+      type: string
+      label: 'GCP Keyfile Path'
+    GCP_PROJECT_ID:
+      type: string
+      label: 'GCP Project ID'
+    GCP_CLOUD_DATASTORE_KIND:
+      type: string
+      label: 'Cloud Datastore Kind'
+    GCP_BIGQUERY_DATASET:
+      type: string
+      label: 'BigQuery Dataset'
+    GCP_BIGQUERY_TABLE:
+      type: string
+      label: 'BigQuery Table'
+    PRODUCTS_JSON_URL:
+      type: string
+      label: 'Products JSON URL'
+    GCP_CLOUD_FUNCTIONS_CLOUD_SQL_URL:
+      type: string
+      label: 'Cloud Functions Cloud SQL Trigger Endpoint URL'
+    GCP_CLOUD_FUNCTIONS_CLOUD_DATASTORE_URL:
+      type: string
+      label: 'Cloud Functions Cloud Datastore Trigger Endpoint URL'
+    GCP_CLOUD_FUNCTIONS_BIGQUERY_URL:
+      type: string
+      label: 'Cloud Functions Bigquery Trigger Endpoint URL'
+    AUTOCOMPLETE_RESULT_MAX_COUNT:
+      type: int
+      label: 'Autocomplete Result Max Count'
+    PRODUCTS_COUNT_LIMIT:
+      type: int
+      label: 'Products Max Count Limit'
+    PRODUCTS_RECORD_CREATE_TOTAL:
+      type: int
+      label: 'Products Create Record Total Count'
+    REDIS_HOSTNAME:
+      type: string
+      label: 'Redis Hostname'
+    REDIS_PORT:
+      type: int
+      label: 'Redis Port'
